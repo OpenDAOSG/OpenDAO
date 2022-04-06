@@ -1000,7 +1000,8 @@ contract OpenCoinStake is Context, Ownable {
 
         require(amount > 0, "Return amount is 0");
 
-        _totalATokenSupply = _totalATokenSupply.sub(amount);
+       // _totalATokenSupply = _totalATokenSupply.sub(amount);
+        _totalATokenSupply = amount;
 
        emit BackTotalATokenSupply(msg.sender,amount);
     }
